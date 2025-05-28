@@ -1,28 +1,11 @@
-var express = require('express');
-app = express();
+// Define a route for the root path
 
-...output omitted..app
-var response;
+const { application } = require("express");
 
+application.get('/', function (req, res) {
 
+      // Send the response directly
 
-app.get('/', function (req, res) {
-
-      response = 'This is version 2 of the app.' + '\n';
-
-
-
-          //send the response to the client
-
-              res.send(response);
-
-
+          res.send('This is version 2 of the app.\n');
 
 });
-
-...output omitted...
-
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
-});
-
