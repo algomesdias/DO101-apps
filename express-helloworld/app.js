@@ -1,11 +1,15 @@
-// Define a route for the root path
+var response;
 
-const { application } = require("express");
+
 
 application.get('/', function (req, res) {
 
-      // Send the response directly
+      response = 'This is version 3 of the app.' + '\n';
 
-          res.send('This is version 2 of the app.\n');
+
+
+          //send the response to the client
+
+              res.send(response);
 
 });
